@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Slider Mejorado - Materialize</title>
+</head>
+<body>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+
+                <h1>Slider Mejorado</h1>
+
+                <hr>
+                <br>
+
+                <div class="slider">
+                    <ul class="slides">
+
+                        
+
+                        <li>
+                            <img src="/img/img1.jpg" alt="">
+                            <div class="caption center-align">
+                                <h3>Lorem ipsum dolor.</h3>
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe!</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="/img/img2.jpg" alt="">
+                            <div class="caption right-align">
+                                <h3>Lorem ipsum dolor.</h3>
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe!</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="/img/img3.jpg" alt="">
+                            <div class="caption left-align">
+                                <h3>Lorem ipsum dolor.</h3>
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe!</h5>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col s6">
+                <div class="section">
+                    <img src="/img/img4.jpg" alt="" class="materialboxed responsive-img"
+                    data-caption="Imagen de un paisaje en el sector izquierdo">
+                    <!-- Data caption - Mensaje descriptivo de la imagen-->
+                </div>
+            </div>
+
+            <div class="col s6">
+                <div class="section">
+                    <img src="/img/img5.jpg" alt="" class="materialboxed responsive-img" 
+                    data-caption="Imagen de un paisaje en el sector derecho">
+                    <!-- Data caption - Mensaje descriptivo de la imagen-->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+        /* Con esto se añadió lo del Slider */
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems, {
+            indicators: false,
+            height: 530,
+            duration: 1500,
+            interval: 3500
+        });
+
+        /* Con esto se añadió lo de la imagen responsive y visualizarla bonito */
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
+
+
+    });
+    </script>
+</body>
+</html>
