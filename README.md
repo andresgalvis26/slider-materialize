@@ -14,7 +14,7 @@ Repository with the files used for the construction and learning of an image sli
 To deploy this project was used Netlify
 
 ```bash
-  npm run deploy
+  https://slider-materializecss-afg.netlify.app/
 ```
 
 
